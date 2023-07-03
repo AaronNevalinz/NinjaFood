@@ -1,0 +1,46 @@
+# Explanation
+
+use the command
+'npm run [whatever the script file name ie 'build-css']'
+
+```
+npm run build css
+```
+Here tailwind is gonna process the file and output it in public/styles.css file
+
+Using npm install a live server, that will always have your project running and also detects and refreshes any changes on the project
+
+```
+npm install live-server -g
+```
+
+creating a tailwind config file
+
+```
+npx tailwindcss init --full
+```
+the `--full` flag creates a config file with all the default values that tailwind uses
+
+Every time a customized value is entered in the `tailwind.config.js` file or the file is updated, you need to reprocess the `src/styles.css` file because it wouldn't be having the updated values and if you are to use the customized values in your html; it won't work
+
+To reprocess this, run: 'Make sure you are in the correct directory where the `package.json` file is located...
+```
+npm run build-css
+```
+This is the previous script in the `package.json` file
+
+Note: this is not a good practise to change default values in the default `tailwind.config.js` file.
+A better option is to create a blank config file and enter the customised values. 
+
+To do this run:
+```
+npx tailwindcss init
+```
+Note: After Changes are made, you will need to rebuild or reprocess your `src/styles.css`
+
+Note: The created config file comes with some default values. The Customized values are created in the `extend` object.
+
+
+
+## Resources
+[Heroicons](https://www.heroicons.com)
